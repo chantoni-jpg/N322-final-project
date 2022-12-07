@@ -7,24 +7,25 @@
 <ion-content>
   <form  [formGroup]="editBookForm" (ngSubmit)="editBookFormData()">
     <ion-list>
+      
       <ion-item>
-        <ion-label>Book Title:{{book?.title}}</ion-label>
+        <ion-label>Book Title:</ion-label>
         <ion-input formControlName="title"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>Author's First Name: {{book?.fname}}</ion-label>
+        <ion-label>Author's First Name:</ion-label>
         <ion-input formControlName="fname"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>Author's Last Name: {{book?.lname}}</ion-label>
+        <ion-label>Author's Last Name:</ion-label>
         <ion-input formControlName="lname"></ion-input>
       </ion-item>
       <ion-item >
-        <ion-label>Release Date: {{book?.date}}</ion-label>
+        <ion-label>Release Date:</ion-label>
         <ion-input formControlName="date"></ion-input>
       </ion-item>
     </ion-list>
 
-<ion-button (click)="editBookFormData()" expand="block"> Edit Book </ion-button>
+<ion-button type="submit" expand="block"> Edit Book </ion-button>
 </form>
 </ion-content>

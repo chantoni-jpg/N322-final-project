@@ -41,8 +41,8 @@ export class FirestoreService {
 
     return deleteDoc(booksRef);
   }
-  updateBook(book: Book) {
-    const booksRef = doc(this.firestore, `books/${book.id}`);
+  updateBook(book: Book, id) {
+    const booksRef = doc(this.firestore, `books/${id}`);
     return updateDoc(booksRef, {
       title: book.title,
       fname: book.fname,
