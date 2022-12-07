@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "newm-n423-final-f2f45": {
+      "hosting": {
+        "app": [
+          "newm-n423-final-f2f45"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "newm-n423-final-f2f45"
+  }
+}

@@ -1,9 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>list-books</ion-title>
+    <ion-title>All Of The Books</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-item *ngFor="let book of books | async" routerLink="/detail/{{book.id}}">
+    <ion-label>
+      <p>Book Title: {{ book.title}}</p>
+      <p>Authors First Name: {{ book.fname }}</p>
+      <p>Authors Last Name: {{ book.lname }}</p>
+      <p>Release Date: {{ book.date }}</p>
+    </ion-label>
+  </ion-item>
 </ion-content>

@@ -5,25 +5,26 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
+  <form [formGroup]="createBookForm" (ngSubmit)="createNewBook()">
   <ion-list>
     <ion-item>
       <ion-label>Book Title:</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="title"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Author's First Name:</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="fname"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Author's Last Name:</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="lname"></ion-input>
     </ion-item>
     <ion-item >
       <ion-label>Release Date:</ion-label>
-      <ion-input></ion-input>
-      <ion-icon name="add-circle-sharp"></ion-icon>
+      <ion-input formControlName="date"></ion-input>
     </ion-item>
+    <ion-button type="submit">Add Book To List</ion-button>
   </ion-list>
+</form>
 </ion-content>

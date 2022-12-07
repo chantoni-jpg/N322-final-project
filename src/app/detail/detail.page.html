@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{book?.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item>
+  <ion-label>
+    <p>Book Title: {{ book?.title}}</p>
+    <p>Authors First Name: {{ book?.fname }}</p>
+    <p>Authors Last Name: {{ book?.lname }}</p>
+    <p>Release Date: {{ book?.date }}</p>
+  </ion-label>
+  <ion-button expand="block" (click)="deleteBook(book.id)"> Delete </ion-button>
+  <ion-button expand="block" href="/edit-book/{{book.id}}"> Edit Book </ion-button>
+</ion-item>
+</ion-content>

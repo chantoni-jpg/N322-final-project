@@ -4,31 +4,37 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () =>
+      import('./home/home.module').then((m) => m.HomePageModule),
   },
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'list-books',
-    loadChildren: () => import('./list-books/list-books.module').then( m => m.ListBooksPageModule)
+    loadChildren: () =>
+      import('./list-books/list-books.module').then(
+        (m) => m.ListBooksPageModule
+      ),
   },
   {
-    path: 'display-book',
-    loadChildren: () => import('./display-book/display-book.module').then( m => m.DisplayBookPageModule)
+    path: 'edit-book/:id',
+    loadChildren: () =>
+      import('./edit-book/edit-book.module').then((m) => m.EditBookPageModule),
   },
   {
-    path: 'edit-delete-book',
-    loadChildren: () => import('./edit-delete-book/edit-delete-book.module').then( m => m.EditDeleteBookPageModule)
+    path: 'detail/:id',
+    loadChildren: () =>
+      import('./detail/detail.module').then((m) => m.DetailPageModule),
   },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
